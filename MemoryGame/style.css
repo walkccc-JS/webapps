@@ -1,0 +1,316 @@
+html {
+  box-sizing: border-box;
+  background: #343434;
+} 
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", "Avenir";
+	font-size: 16px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: white;
+  margin: 0;
+  padding: 20px 0;
+  font-size: 2.5rem;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .header {
+  width: 100%;
+}
+
+.deck {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  height: 90vw;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0 0 3em;
+}
+
+.deck .card {
+  margin: 0.3rem 0.3rem;
+  border-radius: 5px;
+  color: #ffffff;
+  background: rgb(172, 230, 113);
+  font-size: 0px;             /* hide the white cursor icon */
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+.deck .card i, .deck .card .svg-inline--fa {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.deck .card.open {
+  transform: rotateY(0);
+  background: #02b3e4;
+  cursor: default;
+  animation-name: flipInY;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-duration: .75s;
+}
+
+.deck .card.show {
+	font-size: 33px;
+}
+
+.deck .card.match {
+  cursor: default;
+  background: #CC3399;
+  font-size: 33px;
+  animation-name: rubberBand;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-duration: .75s;
+}
+
+.deck .card.unmatched {
+  animation-name: pulse;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-duration: .75s;
+  background: #e2043b;
+}
+
+.deck .card.disabled {
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/***************/
+/* Adjust Size */
+/***************/
+
+.deck .card .big {
+  width: 4rem;
+  height: 4rem;
+}
+
+/***************/
+/* Score Panel */
+/***************/
+
+.score-panel {
+  display: inline-flex;
+  margin-bottom: 10px;
+}
+
+.score-panel .stars {
+  padding: 0;
+  margin: 0 10px 0 0;
+}
+
+.score-panel .stars li {
+  list-style: none;
+  display: inline-block;
+}
+
+.score-panel .restart {
+  float: right;
+  cursor: pointer;
+}
+
+.fa-star {
+  color: #FFD700;
+}
+
+.timer {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+button {
+  height: 2.5rem;
+  color: #99CCCC;
+  font-size: inherit;
+  margin: 0 auto;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-webkit-transition: all 0.3s;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.buttons {
+  margin-bottom: 10px;
+}
+
+.selected, button:hover {
+  cursor: pointer;
+  color: white;
+  background: #99CCCC;
+}
+
+.numBtn {
+  color: orange;
+}
+
+.numSelected, .numBtn:hover {
+  color: white;
+  background: goldenrod !important;
+}
+
+.forfeitBtn {
+  color: rgb(211, 40, 40);
+}
+
+.forfeitSelected, .forfeitBtn:hover {
+  color: white;
+  background: rgb(211, 40, 40) !important;
+}
+
+/**********/
+/* Config */
+/**********/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.window:target {
+  visibility: visible;
+  opacity: 1;
+}
+  
+.window {
+  margin: 70px auto;
+  padding: 20px;
+  background: #ffffff;
+  color: #141214;
+  border-radius: 5px;
+  width: 85%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  font-family: "Montserrat", "Avenir", cursive;
+}
+  
+.window h2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: lightcoral;
+  font-family: "Montserrat", "Avenir";
+}
+
+.window .close {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.window .close:hover {
+  cursor: pointer;
+  color: #FFD700;
+}
+
+.window .content {
+  max-height: 30%;
+  overflow: auto;
+  text-align: center;
+}
+
+.show {
+  visibility: visible !important;
+  opacity: 100 !important;
+}
+
+#starRating li {
+  display: inline-block;
+}
+
+#replay{
+  background: #02b3e4;
+  font-size: 1.1rem;
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  font-family: "Montserrat", "Avenir";
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+@keyframes flipInY {
+  from { transform: perspective(400px) rotate3d(0, 1, 0, 90deg); }
+  40% { transform: perspective(400px) rotate3d(0, 1, 0, -20deg); }
+  60% { transform: perspective(400px) rotate3d(0, 1, 0, 10deg); }
+  80% { transform: perspective(400px) rotate3d(0, 1, 0, -5deg); }
+  to { transform: perspective(400px); }
+}
+
+@keyframes rubberBand {
+  from { transform: scale3d(1, 1, 1); }
+  30% { transform: scale3d(1.25, 0.75, 1); }
+  40% { transform: scale3d(0.75, 1.25, 1); }
+  50% { transform: scale3d(1.15, 0.85, 1); }
+  65% { transform: scale3d(.95, 1.05, 1); }
+  75% { transform: scale3d(1.05, .95, 1); }
+  to { transform: scale3d(1, 1, 1); }
+}
+
+@keyframes pulse {
+  from { transform: scale3d(1, 1, 1); }
+  50% { transform: scale3d(1.2, 1.2, 1.2); }
+  to { transform: scale3d(1, 1, 1); }
+}
+
+@media (min-width: 768px) {
+  .container { font-size: 22px; }
+  .deck {
+  	width: 500px;
+  	height: 500px;
+  }
+
+  .window { width: 40%; }
+}

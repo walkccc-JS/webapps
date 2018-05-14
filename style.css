@@ -1,0 +1,20 @@
+body {
+  background: #232323;
+  margin: 0;
+  /* font-size: 12px; */
+  font-family: "Montserrat", "Avenir";
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+    padding-bottom: 1rem;
+}
+
+a {
+  font-size: 5em;
+  color: whitesmoke;
+  text-decoration: none;
+}

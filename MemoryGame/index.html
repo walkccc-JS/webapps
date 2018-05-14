@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<head>
+  <title>Memory Game</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="./favicon.png"/>
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Memory Game</h1>
+
+    <section class="score-panel">
+      <ul class="stars">
+      	<li><i class="fa fa-star"></i></li>
+      	<li><i class="fa fa-star"></i></li>
+      	<li><i class="fa fa-star"></i></li>
+      </ul>
+
+      <span class="moves">0</span> Move(s)
+        <div class="timer"></div>
+        <div class="restart">
+      	<i class="fas fa-redo-alt"></i>
+        </div>
+    </section>
+
+    <div class="buttons">
+      <button id="easyBtn" class="mode">Easy</button>
+      <button id="mediumBtn" class="mode selected">Med</button>
+      <button id="hardBtn" class="mode">Hard</button>
+      <button id="numBtn" class="numBtn">Nums</button>
+      <button id="forfeitBtn" class="forfeitBtn">Forfeit</button>
+    </div>
+    <ul class="deck" id="card-deck">
+      <!-- Where we put cards -->
+    </ul>
+    <div id="popup" class="overlay">
+      <div class="window">
+        <h2>You Win! 🎉</h2>
+        <div class="close"><i class="fas fa-times"></i></div>
+        <div class="content">
+          <p>You made <span id = finalMove> </span> moves </p>
+          <p>in <span id=totalTime> </span> </p>
+          <p>Rating:  <span id=starRating></span></p>
+        </div>
+        <button id="replay">
+          Replay
+        </button>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="./fontAwesomes.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+</body>
+</html>
