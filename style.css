@@ -1,19 +1,16 @@
-body {
-  background: #232323;
-  margin: 0;
-  font-family: "Montserrat", "Avenir";
+img {
+	width: 30%;
+	float: left;
+	margin: 10%;
 }
 
-ul {
-  list-style: none;
-}
-
-li {
-    padding-bottom: 1rem;
-}
-
-a {
-  font-size: 5em;
-  color: whitesmoke;
-  text-decoration: none;
+p {
+	font-family: Raleway;
+	margin-left: 1.66%;
+	font-size: 23px;
+	font-weight: 800;
+	text-transform: uppercase;
+	border-bottom: 2px solid #f1f1f1;
+	width: 70%;
+	padding-bottom: 20px;
 }
