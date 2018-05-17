@@ -7,7 +7,7 @@ html {
 body, html {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   text-align: center;
 }
 
@@ -42,13 +42,13 @@ body, html {
 }
 
 .key {
-  border: .2rem solid black;
+  border: .1rem solid black;
   border-radius: .5rem;
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
   transition: all .07s ease;
-  width: 10rem;
+  width: 5rem;
   text-align: center;
   color: white;
   background: rgba(0,0,0,0.4);
@@ -62,13 +62,5 @@ body, html {
 }
 
 kbd {
-  display: block;
   font-size: 3rem;
-}
-
-.sound {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  color: #ffc600;
 }
