@@ -6,7 +6,7 @@ A color pick game by guessing the specified color given by the title.
 
 ## A snippet of the project
 
-![](./ColorGame/snippet.png?s=10)
+![](./ColorGame/snippet.png)
 
 ## How to play?
 
