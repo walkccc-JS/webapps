@@ -26,9 +26,9 @@ The main function `init()`:
 
 ```javascript
 function init() {
-    setModeButtons();
-    setSquares();
-    reset();
+  setModeButtons();
+  setSquares();
+  reset();
 }
 ```
 
