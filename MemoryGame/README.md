@@ -6,11 +6,11 @@ A card memory game by opening two same cards to match.
 
 ## A snippet of the project
 
-![](./snippet.png)
+![](./screenshot.png)
 
 ## How to play?
 
-The link: [Memory Game](https://walkccc.github.io/webapps/MemoryGame/)
+The link: [Memory Game](https://walkccc.github.io/webapps/MemoryGame)
 
 There are three different difficulties in the project:
 
@@ -26,8 +26,8 @@ The main function `init()`:
 
 ```javascript
 function init() {
-    setButtons();
-    startGame();
+  setButtons();
+  startGame();
 }
 ```
 
