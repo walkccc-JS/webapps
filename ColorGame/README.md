@@ -10,7 +10,7 @@ A color pick game by guessing the specified color given by the title.
 
 ## How to play?
 
-The link: [Color Game](https://walkccc.github.io/webapps/ColorGame/)
+The link: [Color Game](https://walkccc.github.io/webapps/ColorGame)
 
 There are three different difficulties in the project:
 
@@ -40,7 +40,7 @@ function init() {
 
 - `setSquares()`: sets up the settings of the squares.
 
-- `startGame()`: starts the [Color Game](https://walkccc.github.io/webapps/ColorGame/)!
+- `startGame()`: starts the [Color Game](https://walkccc.github.io/webapps/ColorGame)!
 
 The algorithm behinds this project is easy to learn. You can download the source code and change the mechanism of generating random colors or try to add some new squares or add some buttons.
 

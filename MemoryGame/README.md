@@ -54,7 +54,7 @@ Here I declared a `openedCard = []` to hold the opened cards (maximum = 2).
 
 - `addCardsListener()`: adds the necessary listeners to all cards in the board.
 
-- `startGame()`: starts the [Memory Game](https://walkccc.github.io/webapps/MemoryGame/)!
+- `startGame()`: starts the [Memory Game](https://walkccc.github.io/webapps/MemoryGame)!
 
 The algorithm behinds this project is easy to learn. You can download the source code and change the mechanism of generating random colors or try to add some new squares or add some buttons.
 
