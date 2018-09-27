@@ -33,13 +33,9 @@ function init() {
 ```
 
 - `changeColors()`: changes the colors of the squares.
-
 - `pickColor()`: randomly chooses the goad color.
-
 - `generateRandomColors(n)` and `randomColor()`: randomly generate the colors of the squares.
-
 - `setSquares()`: sets up the settings of the squares.
-
 - `startGame()`: starts the [Color Game](https://walkccc.github.io/webapps/ColorGame)!
 
 The algorithm behinds this project is easy to learn. You can download the source code and change the mechanism of generating random colors or try to add some new squares or add some buttons.

@@ -34,7 +34,6 @@ function init() {
 Here I declared a `openedCard = []` to hold the opened cards (maximum = 2).
 
 - `appendCards(n)`: appends the cards to the deck board.
-
 - In `setButton()`, there are many tasks we have to assign:
 
     - set the mode buttons (Easy, Med and Hard)
@@ -43,17 +42,11 @@ Here I declared a `openedCard = []` to hold the opened cards (maximum = 2).
     - set the FORFEIT button
 
 - `shuffle()`: shuffle the given cards array.
-
 - `matched()` and `unmatched()`: change the classes of the cards object.
-
 - `disable()` and `enable()`: set the click behavior when cards are either matched or unmatched.
-
 - `moveCounter()`: records the moves player made.
-
 - `startTimer()`: starts the timer when player opens the first card (from 00:00 to 59:59).
-
 - `addCardsListener()`: adds the necessary listeners to all cards in the board.
-
 - `startGame()`: starts the [Memory Game](https://walkccc.github.io/webapps/MemoryGame)!
 
 The algorithm behinds this project is easy to learn. You can download the source code and change the mechanism of generating random colors or try to add some new squares or add some buttons.
