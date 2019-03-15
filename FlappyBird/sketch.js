@@ -175,3 +175,14 @@ document.addEventListener('click', () => {
     setup();
   }
 });
+
+document.addEventListener('touchstart', () => {
+  if (!isStop) {
+    isStart = true;
+    fly();
+  } else {
+    isStart = true;
+    isStop = false;
+    setup();
+  }
+});
