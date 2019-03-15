@@ -15,7 +15,7 @@ let flap = ['down', 'mid', 'up'];
 let birds = [];
 
 const DIR =
-  'https://raw.githubusercontent.com/walkccc/webapps/master/FlappyBird/assets/';
+  'https://raw.githubusercontent.com/walkccc/webapps/gh-pages/FlappyBird/assets/';
 
 let allPipes = [];
 let pipesPath = [
