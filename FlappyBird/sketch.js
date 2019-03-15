@@ -154,13 +154,24 @@ const fly = () => {
 
 function keyPressed() {
   if (key === ' ') {
+    if (!isStop) {
+      isStart = true;
+      fly();
+    } else {
+      isStart = true;
+      isStop = false;
+      setup();
+    }
+  }
+}
+
+document.addEventListener('click', () => {
+  if (!isStop) {
     isStart = true;
     fly();
-  }
-
-  if (isStop && key === ' ') {
+  } else {
     isStart = true;
     isStop = false;
     setup();
   }
-}
+});
