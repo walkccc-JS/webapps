@@ -140,11 +140,11 @@ function draw() {
   }
 }
 
-function gg() {
+const gg = () => {
   isStop = true;
   hit.play();
   die.play();
-}
+};
 
 const fly = () => {
   wing.play();
@@ -152,7 +152,7 @@ const fly = () => {
   angle = -45;
 };
 
-function keyPressed() {
+const action = () => {
   if (key === ' ') {
     if (!isStop) {
       isStart = true;
@@ -163,26 +163,13 @@ function keyPressed() {
       setup();
     }
   }
+};
+
+function keyPressed() {
+  action();
 }
 
-document.addEventListener('click', () => {
-  if (!isStop) {
-    isStart = true;
-    fly();
-  } else {
-    isStart = true;
-    isStop = false;
-    setup();
-  }
-});
-
-document.addEventListener('touchstart', () => {
-  if (!isStop) {
-    isStart = true;
-    fly();
-  } else {
-    isStart = true;
-    isStop = false;
-    setup();
-  }
-});
+function touchStarted() {
+  action();
+  return false;
+}
